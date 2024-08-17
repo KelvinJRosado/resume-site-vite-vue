@@ -7,7 +7,8 @@ import PageHeader from './components/PageHeader.vue';
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
   <nav>
     <RouterLink to="/">Home</RouterLink> |
-    <RouterLink to="/education">Education</RouterLink>
+    <RouterLink to="/education">Education</RouterLink> |
+    <RouterLink to="/experience">Experience</RouterLink>
   </nav>
   <main>
     <RouterView></RouterView>
