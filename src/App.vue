@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import PageBody from './components/PageBody.vue';
 import PageHeader from './components/PageHeader.vue';
 </script>
 
 <template>
   <PageHeader></PageHeader>
-  <PageBody></PageBody>
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
+  <nav>
+    <RouterLink to="/">Home</RouterLink> |
+    <RouterLink to="/education">Education</RouterLink>
+  </nav>
+  <main>
+    <RouterView></RouterView>
+  </main>
 </template>
 
 <style scoped></style>
