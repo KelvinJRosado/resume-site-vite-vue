@@ -2,39 +2,17 @@
 import { ref } from 'vue';
 import AccordionItem from './AccordionItem.vue';
 
-const accordionItems = ref([
-  {
-    id: 1,
-    title: 'What is HTML?',
-    content:
-      'HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. It describes the structure of a Web page.',
-    isOpen: false,
-  },
-  {
-    id: 2,
-    title: 'What is CSS?',
-    content:
-      'CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media.',
-    isOpen: false,
-  },
-  {
-    id: 3,
-    title: 'What is JavaScript?',
-    content:
-      'JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications.',
-    isOpen: false,
-  },
-]);
+const props = defineProps<{
+  data: { id: number; title: string; content: string; isOpen: boolean }[];
+}>();
 
-const menuItems = ref(accordionItems);
+const menuItems = ref(props.data);
 
 const toggleItem = (id: number) => {
   const item = menuItems.value.find((it) => it.id === id);
 
   if (item) {
     const originalItemState = item?.isOpen; // Grab the original state of the item
-
-    console.log('Original state: ', originalItemState);
 
     // Close all other items
     menuItems.value.forEach((it) => {
@@ -43,8 +21,6 @@ const toggleItem = (id: number) => {
 
     // Set the desired item state
     item.isOpen = !originalItemState;
-
-    console.log('New state: ', item.isOpen);
   }
 };
 </script>
