@@ -18,6 +18,7 @@ const accordionItems = [
       'Worked to support APIs for internal eventing system',
       'Helped to develop a scalable and resilience event-driven architecture on AWS',
       'Developed and refined GitLab CI/CD Pipelines',
+      'Implemented automated end-to-end integration testing for APIs to help catch bugs',
     ],
     isOpen: false,
   },
@@ -28,6 +29,7 @@ const accordionItems = [
     listContent: [
       'Used Ansible and Python to automatically deploy and configure servers',
       'Automated the deployment of virtual machines to vSphere through Ansible and Docker',
+      'Deployed, maintained, and supported self-hosted CI/CD tools',
       'Used Node for backend development of an internal web app',
     ],
     isOpen: false,
