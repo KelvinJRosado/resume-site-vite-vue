@@ -32,6 +32,16 @@ const accordionItems = [
     ],
     isOpen: false,
   },
+  {
+    id: 4,
+    title:
+      'Undergraduate Research Assistant - Georgia Southern University Physics Department (August 2016 - May 2018)',
+    listContent: [
+      'Developer Fortran 95 programs to improve the speed of mathematical calculations',
+      'Replicated Mathematica programs in Fortran to make the calculations more efficient',
+    ],
+    isOpen: false,
+  },
 ];
 </script>
 
