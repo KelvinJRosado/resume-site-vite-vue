@@ -1,11 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{
-  id: number;
-  title: string;
-  content?: string;
-  listContent?: string[];
-  isOpen: boolean;
-}>();
+import { AccordionItem } from '../types';
+
+const props = defineProps<AccordionItem>();
 
 const emit = defineEmits(['toggleItem']);
 

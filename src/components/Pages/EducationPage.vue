@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { AccordionItem } from '../../types';
 import AccordionMenu from '../AccordionMenu.vue';
 
-const accordionItems = [
+const accordionItems: AccordionItem[] = [
   {
     id: 1,
     title: 'M.S Computer Science - Georgia Institute of Technology (2021)',

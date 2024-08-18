@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { AccordionItem } from '../../types';
 import AccordionMenu from '../AccordionMenu.vue';
 
-const accordionItems = [
+const experienceItems: AccordionItem[] = [
   {
     id: 1,
     title: 'Lead Software Engineer - State Farm (June 2023 - Present)',
@@ -15,8 +16,9 @@ const accordionItems = [
     id: 2,
     title: 'Software Engineer - State Farm (January 2020 - June 2023)',
     listContent: [
-      'Worked to support APIs for internal eventing system',
-      'Helped to develop a scalable and resilience event-driven architecture on AWS',
+      'Worked to develop APIs for internal eventing system',
+      'Helped to develop a scalable and resilience event-driven architecture on AWS using services such as Lambda, SQS, SNS, and DynamoDB',
+      'Used terraform as an IaC tool to deploy resources to AWS',
       'Developed and refined GitLab CI/CD Pipelines',
       'Implemented automated end-to-end integration testing for APIs to help catch bugs',
     ],
@@ -49,7 +51,7 @@ const accordionItems = [
 
 <template>
   <h1>Hello from Experience!</h1>
-  <AccordionMenu :data="accordionItems"></AccordionMenu>
+  <AccordionMenu :data="experienceItems"></AccordionMenu>
 </template>
 
 <style scoped></style>
