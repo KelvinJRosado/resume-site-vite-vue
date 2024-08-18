@@ -20,6 +20,7 @@ export default [
     rules: {
       'capitalized-comments': 'off',
       'no-console': 'off',
+      'no-inline-comments': 'off',
       'no-magic-numbers': 'off',
       'no-plusplus': 'off',
       'no-useless-assignment': 'off',
@@ -30,6 +31,7 @@ export default [
       'sort-keys': 'off',
       'vue/attribute-hyphenation': 'off',
       'vue/order-in-components': 'off',
+      'vue/v-on-event-hyphenation': 'off',
     },
   },
 ];
