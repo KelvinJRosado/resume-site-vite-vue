@@ -5,13 +5,20 @@ const accordionItems = [
   {
     id: 1,
     title: 'M.S Computer Science - Georgia Institute of Technology (2021)',
-    content: 'Enter grad info here',
+    listContent: [
+      'Specialization in A.I',
+      'Part-time student while working full-time',
+    ],
     isOpen: false,
   },
   {
     id: 2,
     title: 'B.S Computer Science - Georgia Southern University (2018)',
-    content: 'Enter undergrad info here',
+    listContent: [
+      'Univeristy Honors Program graduate',
+      'Software Engineering certificate',
+      'Computer Science Student of the Year 2018',
+    ],
     isOpen: false,
   },
 ];

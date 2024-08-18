@@ -3,7 +3,13 @@ import { ref } from 'vue';
 import AccordionItem from './AccordionItem.vue';
 
 const props = defineProps<{
-  data: { id: number; title: string; content: string; isOpen: boolean }[];
+  data: {
+    id: number;
+    title: string;
+    content?: string;
+    listContent?: string[];
+    isOpen: boolean;
+  }[];
 }>();
 
 const menuItems = ref(props.data);
@@ -34,6 +40,7 @@ const toggleItem = (id: number) => {
         :key="item.id"
         :title="item.title"
         :content="item.content"
+        :listContent="item.listContent"
         :isOpen="item.isOpen"
         @toggleItem="toggleItem"
       ></AccordionItem>

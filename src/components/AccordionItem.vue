@@ -2,7 +2,8 @@
 const props = defineProps<{
   id: number;
   title: string;
-  content: string;
+  content?: string;
+  listContent?: string[];
   isOpen: boolean;
 }>();
 
@@ -24,7 +25,10 @@ const handleClick = (id: number | unknown) => {
       </div>
     </div>
     <div :class="['content', { open: isOpen }]">
-      <p>{{ props.content }}</p>
+      <p v-if="props.content">{{ props.content }}</p>
+      <ul v-if="props.listContent">
+        <li v-for="item in props.listContent" :key="item">{{ item }}</li>
+      </ul>
     </div>
   </div>
 </template>
