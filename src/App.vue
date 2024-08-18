@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import PageHeader from './components/PageHeader.vue';
+import { routes } from './main';
 </script>
 
 <template>
   <PageHeader></PageHeader>
   <nav>
-    <RouterLink to="/" class="nav-button" active-class="active"
-      >Home</RouterLink
-    >
-    <RouterLink to="/education" class="nav-button" active-class="active"
-      >Education</RouterLink
-    >
-    <RouterLink to="/experience" class="nav-button" active-class="active"
-      >Experience</RouterLink
+    <RouterLink
+      v-for="route in routes"
+      :key="route.label"
+      :to="route.path"
+      :class="'nav-button'"
+      :active-class="'active'"
+      >{{ route.label }}</RouterLink
     >
   </nav>
   <main>
