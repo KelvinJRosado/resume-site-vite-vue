@@ -6,14 +6,16 @@ import { routes } from './main';
 <template>
   <PageHeader></PageHeader>
   <nav>
-    <RouterLink
-      v-for="route in routes"
-      :key="route.label"
-      :to="route.path"
-      :class="'nav-button'"
-      :active-class="'active'"
-      >{{ route.label }}</RouterLink
-    >
+    <template v-for="route in routes">
+      <RouterLink
+        v-if="!route.redirect"
+        :key="route.name"
+        :to="route.path"
+        :class="'nav-button'"
+        :active-class="'active'"
+        >{{ route.name }}</RouterLink
+      >
+    </template>
   </nav>
   <main>
     <RouterView></RouterView>
