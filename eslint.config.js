@@ -8,7 +8,7 @@ export default [
   ...tseslint.configs.strict,
   ...pluginVue.configs['flat/recommended'],
   eslintConfigPrettier,
-  { ignores: ['dist/'] },
+  { ignores: ['dist/', 'docs/'] },
   {
     files: ['src/**/*.ts', 'src/**/*.vue', '*.ts', '*.vue', '*.js'],
     languageOptions: {
