@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build && cp -r dist/* docs/",
+    "build": "vue-tsc -b && vite build && cp -r dist/* docs/ && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "lint": "eslint -c eslint.config.js",
     "prepare": "husky",
