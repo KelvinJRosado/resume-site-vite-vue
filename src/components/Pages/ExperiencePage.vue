@@ -50,7 +50,6 @@ const experienceItems: AccordionItem[] = [
 </script>
 
 <template>
-  <h1>Hello from Experience!</h1>
   <AccordionMenu :data="experienceItems"></AccordionMenu>
 </template>
 

@@ -28,7 +28,6 @@ const accordionItems: AccordionItem[] = [
 </script>
 
 <template>
-  <h1>Hello from Education!</h1>
   <AccordionMenu :data="accordionItems"></AccordionMenu>
 </template>
 
