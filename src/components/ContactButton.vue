@@ -4,13 +4,18 @@ defineProps<{ displayText: string; link: string }>();
 </script>
 
 <template>
-  <div rounded outlined class="card flex justify-center">
+  <div class="card flex justify-center">
     <Button
       as="a"
       :label="displayText"
       :href="link"
       target="_blank"
       rel="noopener"
+      text
+      raised
+      outlined
+      rounded
+      severity="contrast"
     >
     </Button>
   </div>

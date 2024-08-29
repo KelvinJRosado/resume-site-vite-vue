@@ -60,7 +60,6 @@ const handleClick = (id: number | unknown) => {
     height: 0;
     overflow-y: scroll;
     line-height: 1.5;
-    background-color: antiquewhite;
     transition: height 0.5s;
     &::-webkit-scrollbar {
       width: 5px;

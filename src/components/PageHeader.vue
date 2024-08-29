@@ -23,7 +23,7 @@ const contactButtons = [
 
 <template>
   <div class="page-header">
-    <h1 class="centered-row">Kelvin Rosado</h1>
+    <h1 class="centered-row">Kelvin Rosado - Lead Software Engineer</h1>
     <div class="centered-row">
       <ContactButton
         v-for="button in contactButtons"
@@ -37,7 +37,6 @@ const contactButtons = [
 
 <style scoped>
 .page-header {
-  background-color: #f5f5f5;
   padding: 20px;
   text-align: center;
 }

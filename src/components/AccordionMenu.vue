@@ -55,7 +55,6 @@ const toggleItem = (id: number) => {
   margin: 0 auto;
   margin-top: 10%;
   margin-bottom: 10%;
-  background-color: rgb(240, 248, 255);
   padding: 10px;
   border-radius: 6px;
   .accordion {
