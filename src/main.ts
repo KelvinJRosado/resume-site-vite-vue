@@ -5,6 +5,8 @@ import EducationPage from './components/Pages/EducationPage.vue';
 import ExperiencePage from './components/Pages/ExperiencePage.vue';
 import HomePage from './components/Pages/HomePage.vue';
 import SkillsPage from './components/Pages/SkillsPage.vue';
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura';
 
 const basePath = '/resume-site-vite-vue';
 
@@ -37,4 +39,7 @@ app.config.errorHandler = (err) => {
 };
 
 app.use(router);
+
+app.use(PrimeVue, { theme: { preset: Aura } });
+
 app.mount('#app');
