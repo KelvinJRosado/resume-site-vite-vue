@@ -7,29 +7,27 @@ import HomePage from './components/Pages/HomePage.vue';
 import SkillsPage from './components/Pages/SkillsPage.vue';
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
-
 import 'primeicons/primeicons.css';
 
 const basePath = '/resume-site-vite-vue';
 
 export const routes: RouteRecordRaw[] = [
-  { path: '/', redirect: { name: 'Home' } },
-  { path: `${basePath}`, component: HomePage, name: 'Home' },
+  { path: '/', component: HomePage, name: 'Home' },
   {
-    path: `${basePath}/education`,
+    path: '/education',
     component: EducationPage,
     name: 'Education',
   },
   {
-    path: `${basePath}/experience`,
+    path: '/experience',
     component: ExperiencePage,
     name: 'Experience',
   },
-  { path: `${basePath}/skills`, component: SkillsPage, name: 'Skills' },
+  { path: '/skills', component: SkillsPage, name: 'Skills' },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(basePath),
   routes,
 });
 

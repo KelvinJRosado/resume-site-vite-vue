@@ -1,42 +1,39 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import { MenuItem } from 'primevue/menuitem';
 import PageHeader from './components/PageHeader.vue';
 import { routes } from './main';
+import Menubar from 'primevue/menubar';
+import { PrimeIcons } from '@primevue/core/api';
+
+// Construct MenuItem array from routes
+const menuItemsPre: MenuItem[] = [];
+routes.forEach((item) => {
+  menuItemsPre.push({
+    label: item.name?.toString(),
+    icon: PrimeIcons.ANDROID,
+    route: item.path,
+  });
+});
+
+const menuItems = ref(menuItemsPre);
 </script>
 
 <template>
   <PageHeader></PageHeader>
-  <nav>
-    <template v-for="route in routes">
-      <RouterLink
-        v-if="!route.redirect"
-        :key="route.name"
-        :to="route.path"
-        :class="'nav-button'"
-        :active-class="'active'"
-        >{{ route.name }}</RouterLink
-      >
+  <Menubar :model="menuItems">
+    <template #item="{ item, props }">
+      <RouterLink v-slot="{ href, navigate }" :to="item.route" custom>
+        <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+          <span :class="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </RouterLink>
     </template>
-  </nav>
+  </Menubar>
   <main>
     <RouterView></RouterView>
   </main>
 </template>
 
-<style scoped>
-.nav-button {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  text-decoration: none;
-  color: #333;
-}
-
-.active {
-  background-color: #0f78a2;
-  border-color: #0f78a2;
-  border-radius: 4px;
-  color: white;
-  pointer-events: none;
-}
-</style>
+<style scoped></style>
