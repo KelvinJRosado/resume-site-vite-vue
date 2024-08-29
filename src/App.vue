@@ -22,7 +22,6 @@ import { routes } from './main';
   </main>
 </template>
 
-<style scoped></style>
 <style scoped>
 .nav-button {
   display: inline-block;

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import ContactButton from './ContactButton.vue';
+import Button from 'primevue/button';
+
+import { PrimeIcons } from '@primevue/core/api';
 
 const contactButtons = [
   {
@@ -19,6 +22,11 @@ const contactButtons = [
     link: 'https://gitlab.com/KelvinRosado',
   },
 ];
+
+const toggleDarkMode = () => {
+  const element = document.querySelector('html');
+  element?.classList.toggle('my-app-dark');
+};
 </script>
 
 <template>
@@ -31,6 +39,13 @@ const contactButtons = [
         :displayText="button.displayText"
         :link="button.link"
       ></ContactButton>
+      <Button
+        :icon="PrimeIcons.MOON"
+        label="Toggle Dark Mode"
+        @click="toggleDarkMode()"
+      ></Button>
+      <i class="pi pi-amazon"></i>
+      <i class="pi pi-times"></i>
     </div>
   </div>
 </template>

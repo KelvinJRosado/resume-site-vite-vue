@@ -8,6 +8,8 @@ import SkillsPage from './components/Pages/SkillsPage.vue';
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
 
+import 'primeicons/primeicons.css';
+
 const basePath = '/resume-site-vite-vue';
 
 export const routes: RouteRecordRaw[] = [
@@ -40,6 +42,13 @@ app.config.errorHandler = (err) => {
 
 app.use(router);
 
-app.use(PrimeVue, { theme: { preset: Aura } });
+app.use(PrimeVue, {
+  theme: {
+    preset: Aura,
+    options: {
+      darkModeSelector: '.my-app-dark',
+    },
+  },
+});
 
 app.mount('#app');
