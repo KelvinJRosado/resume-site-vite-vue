@@ -8,18 +8,22 @@ const contactButtons = [
   {
     displayText: 'Email',
     link: 'mailto:kelvin.rosado.ayala@gmail.com',
+    icon: PrimeIcons.ENVELOPE,
   },
   {
     displayText: 'LinkedIn',
     link: 'https://linkedin.com/in/kelvin-rosado',
+    icon: PrimeIcons.LINKEDIN,
   },
   {
     displayText: 'GitHub',
     link: 'https://github.com/KelvinJRosado',
+    icon: PrimeIcons.GITHUB,
   },
   {
     displayText: 'GitLab',
     link: 'https://gitlab.com/KelvinRosado',
+    icon: PrimeIcons.CODE,
   },
 ];
 
@@ -33,19 +37,18 @@ const toggleDarkMode = () => {
   <div class="page-header">
     <h1 class="centered-row">Kelvin Rosado - Lead Software Engineer</h1>
     <div class="centered-row">
+      <Button
+        :icon="PrimeIcons.MOON"
+        label="Dark Mode"
+        @click="toggleDarkMode()"
+      ></Button>
       <ContactButton
         v-for="button in contactButtons"
         :key="button.displayText"
         :displayText="button.displayText"
         :link="button.link"
+        :icon="button.icon"
       ></ContactButton>
-      <Button
-        :icon="PrimeIcons.MOON"
-        label="Toggle Dark Mode"
-        @click="toggleDarkMode()"
-      ></Button>
-      <i class="pi pi-amazon"></i>
-      <i class="pi pi-times"></i>
     </div>
   </div>
 </template>

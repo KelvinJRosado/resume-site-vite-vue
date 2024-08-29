@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
-import { PrimeIcons } from '@primevue/core/api';
-defineProps<{ displayText: string; link: string }>();
+defineProps<{ displayText: string; link: string; icon: string }>();
 </script>
 
 <template>
@@ -17,7 +16,7 @@ defineProps<{ displayText: string; link: string }>();
       outlined
       rounded
       severity="contrast"
-      :icon="PrimeIcons.LINKEDIN"
+      :icon="icon"
     >
     </Button>
   </div>

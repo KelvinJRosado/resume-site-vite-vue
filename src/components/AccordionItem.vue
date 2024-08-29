@@ -66,11 +66,9 @@ const handleClick = (id: number | unknown) => {
     }
     &::-webkit-scrollbar-track {
       appearance: none;
-      background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
       width: 5px;
-      background-color: rgb(232, 210, 182);
       border-radius: 50px;
     }
     p {
