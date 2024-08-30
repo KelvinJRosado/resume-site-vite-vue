@@ -20,6 +20,7 @@ import Button from 'primevue/button';
           :class="'nav-button'"
           :active-class="'active'"
           :icon="route.icon"
+          size:="large"
           text
           raised
           outlined
@@ -33,6 +34,10 @@ import Button from 'primevue/button';
 </template>
 
 <style scoped>
+.nav-button {
+  margin: 5px;
+}
+
 .active {
   background-color: #0f78a2;
   border-color: #0f78a2;

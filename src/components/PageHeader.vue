@@ -30,6 +30,22 @@ const contactButtons = [
 const toggleDarkMode = () => {
   const element = document.querySelector('html');
   element?.classList.toggle('my-app-dark');
+
+  // Change dark mode button icon from moon to sun, or vice versa
+  const moon = document.querySelector('.pi-moon');
+
+  if (moon) {
+    moon.classList.remove('pi-moon');
+    moon.classList.add('pi-sun');
+    return;
+  }
+
+  const sun = document.querySelector('.pi-sun');
+
+  if (sun) {
+    sun.classList.remove('pi-sun');
+    sun.classList.add('pi-moon');
+  }
 };
 </script>
 

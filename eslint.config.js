@@ -19,6 +19,7 @@ export default [
     },
     rules: {
       'capitalized-comments': 'off',
+      'max-statements': 'off',
       'no-console': 'off',
       'no-inline-comments': 'off',
       'no-magic-numbers': 'off',
