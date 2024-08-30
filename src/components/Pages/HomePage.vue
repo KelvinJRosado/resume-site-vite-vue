@@ -26,7 +26,7 @@ import Card from 'primevue/card';
           href="https://github.com/KelvinJRosado/resume-site-vite-vue"
           target="_blank"
           >here</a
-        >".
+        >"
       </p>
       <br />
       <p>
